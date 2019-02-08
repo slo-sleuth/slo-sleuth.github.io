@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
+# Welcome to Data Discoveries
 
-You can use the [editor on GitHub](https://github.com/slo-sleuth/slo-sleuth.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+The intent of this page is document data structures and extraction techniques discovered during forensic analysis in my primary career.  I will focus on adding information not readily available in the wild, and I will link to code projects for related analysis tools I have created.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Validate any information here you plan to utilize: I don't assume any liability for being incorrect.  Unless otherwise stated, Consider information shared here as **publicly shared personal notes** rather than published *white papers*.  I share freely because others have shared with me, and I invite correction and discussion.
 
-### Markdown
+*Check back frequently as I plan to update often...*
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Apple Data
 
-```markdown
-Syntax highlighted code block
+- [Apple Fusion Drive Acquisition and Mounting](Apple/AppleFusionDrives.md)
 
-# Header 1
-## Header 2
-### Header 3
+## Microsoft Data
 
-- Bulleted
-- List
+## Unix Data
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/slo-sleuth/slo-sleuth.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Other Data
