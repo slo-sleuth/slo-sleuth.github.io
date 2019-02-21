@@ -1,20 +1,20 @@
 # Apple Fusion Drive Imaging
 
-Apple fusion drives consist of two physical storage devices combined as a logical volume.  One device is Solid State, and the other SATA.  Imaging is most easily accomplished by placing the Apple computer sporting the fusion drive in [Target Disk Mode](https://support.apple.com/en-us/HT201462) because the logical volume is presented.  
+Apple fusion drives consist of two physical storage devices combined as a logical volume.  One device is Solid State, and the other SATA.  Imaging is most easily accomplished by placing the Apple computer with the fusion drive in [Target Disk Mode](https://support.apple.com/en-us/HT201462) because the logical volume is presented.  Image the logical volume and you're done.
 
-But what if you can't place your device into Target Disk Mode?  Can you image the devices separately and still create the logical volume?  You bet...
+But what if you can't place your device into Target Disk Mode?  Can you image the devices separately and still create the logical volume?  Yes, you can.
 
 ---
 
 ## Device Imaging
 
-Imaging of Apple Macintosh computers (Intel Macs) can be accomplish with [DEFT Zero](http://www.deftlinux.net/2018/09/01/deft-zero-2018-2-ready-for-download/).  DEFT Zero is a personal favorite of mine because it is EFI ready which means it will boot modern Windows and Mac systems.  It is small, able to load entirely into RAM and free the USB port used to boot DEFT.
+Imaging of Apple Macintosh computers (Intel Macs) can be accomplish with [DEFT Zero](http://www.deftlinux.net/2018/09/01/deft-zero-2018-2-ready-for-download/).  DEFT Zero is a personal favorite of mine because it is EFI ready which means it will boot modern Windows and Mac systems.  It is small, able to load entirely into RAM and free the USB port used to boot DEFT.  Booting with DEFT means no computer disassembly, and that can be a big deal with some Macs.
 
 DEFT Zero includes the [Guymager](https://guymager.sourceforge.io/) imaging tool which is multi-threaded (*fast*), easy to use, and uses efficient compression.  It also includes other imaging tools should you need them, such as [dc3dd](https://sourceforge.net/projects/dc3dd/) and [ddrescue](https://www.gnu.org/software/ddrescue/) for damaged drives.  
 
->**NOTE:** It was a damaged SATA drive that led to this post.
+> **NOTE:** It was a damaged SATA drive that led to this post.
 
-Imaging in Expert Witness Format (EWF, aka "EnCase" format) or Advanced Forensics Format (AFF) is acceptable and in fact preferred.
+Imaging in Expert Witness Format (EWF, aka "EnCase" format) or Advanced Forensics Format (AFF) is acceptable and, in fact, preferred.
 
 ---
 
