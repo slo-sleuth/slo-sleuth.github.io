@@ -15,3 +15,5 @@ Validate any information here you plan to utilize: I don't assume any liability 
 ## Unix Data
 
 ## Other Data
+
+- [Google Chrome History](OtherData/GoogleChromeHistory.md)
