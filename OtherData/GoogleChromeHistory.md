@@ -8,8 +8,8 @@ The `visits`, `urls`, and `keyword_search_terms` tables can be related together 
 
 The following SQLite query will result in a table that contains the following columns to the Google Chrome `History` database:
 
-visit_time| search_term| page_title| url| visit_count| last_visit time
-----------|------------|-----------|----|------------|----------------
+|visit_time| search_term| page_title| url| visit_count| last_visit time|
+|----------|------------|-----------|----|------------|----------------|
 
 ## Google Chrome History
 ```sql
