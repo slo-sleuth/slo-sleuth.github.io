@@ -1,8 +1,8 @@
 # Google Chrome History
 
-The `History` database (as of 6/2018) contains 12 tables, but no views to hint at the relationships between them.
+The `History` database (as of 2019-02-21) contains 12 tables, but no views to hint at the relationships between them.
 
-![History Schema](schema.png)
+![History Schema](schema.PNG)
 
 The `visits`, `urls`, and `keyword_search_terms` tables can be related together to produce a browsing history that reflects web page visits and the user's search terms, if any.  The urls table records the webpage titles and locations, and it also records the number of visits to the page and the last visit date.  The visits table records each visit to the page and is related to the urls table by `visits.url = url.id`.  The `keyword_search_terms` table is related to the `url` table by `keyword_search_terms.url_id = urls.id`.  Dates are recorded in *WebKit Time*, i.e., microseconds since 1601-01-01.
 
