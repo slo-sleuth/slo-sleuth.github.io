@@ -15,18 +15,18 @@ The following SQLite query will result in a table that contains the following co
   - visit_count 
   - last_visit time
 
-## Google Chrome History
+### History SQL
 ```sql
 select  
-	datetime(v.visit_time  / 1000000 + (strftime('%s', '1601-01-01')), 'unixepoch', 'localtime') as visit_time, 
-	k.term as search_term, 
-	u.title as page_title, 
-	u.url,
-	u.visit_count,
-	case u.last_visit_time
-		when 0 then null
-		else datetime(u.last_visit_time/1000000 + (strftime('%s', '1601-01-01')), 'unixepoch', 'localtime') 
-	end as last_visit_time
+    datetime(v.visit_time  / 1000000 + (strftime('%s', '1601-01-01')), 'unixepoch', 'localtime') as visit_time, 
+    k.term as search_term, 
+    u.title as page_title, 
+    u.url,
+    u.visit_count,
+    case u.last_visit_time
+        when 0 then null
+        else datetime(u.last_visit_time/1000000 + (strftime('%s', '1601-01-01')), 'unixepoch', 'localtime') 
+    end as last_visit_time
 from urls as u
 left join visits as v on v.url = u.id  
 left join keyword_search_terms as k on k.url_id = u.id
