@@ -1,0 +1,45 @@
+= Test
+
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+:toc:
+:toc-placement!:
+
+I am testing asciidoc rendering to a html by Github.
+
+toc::[]
+
+== Tables
+
+Tables are of interest.  They didn't auto render automatically with markdown.
+
+|===
+|Heading 1|Heading 2
+|content 1|content 2
+|===
+
+== Code blocks
+
+[source,sql]
+----
+select 
+  fname,
+  lname
+from address
+where lname = "Doe"
+order by fname asc
+----
+
+== Admonitions
+
+IMPORTANT: This is important!
+
+NOTE: This is noteworthy
+
+TIP: Take this tip
