@@ -27,13 +27,13 @@ Macs with T2 chips (iMacs 2017+, MacBooks 2018+) must be extracted logically.  T
 ### Prepare the Target Device
 
 - Plug in an external drive formatted exFAT, HFS+, or APFS
-  - exFAT preferred for universal access.
+  - exFAT preferred for universal operating system access.
   - Drive will automount read-write
   
-NOTE: It is possible to take two different tracks at this point.  One can create an archive of the logical content or a disk image.  The rest of this section will focus on the disk image variant because many analysis tools are capable of reading file system metadata but few, in my experience, do a good job with reading that metadata from archives.
+_NOTE: It is possible to take two different tracks at this point.  One can create an archive of the logical content or a disk image.  The rest of this section will focus on the disk image variant because many analysis tools are capable of reading file system metadata but few, in my experience, do a good job with reading that metadata from archives._
   
 - Create a disk image large enough to hold the evidence volume's logical data
-  - hdiutil create -size <integer><m|g|t> -volname <desired name> -fs <HFS+|APFS> -attach <diskimage>
+  - SYNTAX: hdiutil create -size <integer><m|g|t> -volname <desired name> -fs <HFS+|APFS> -attach <diskimage>
   - APFS volumes are relatively new and not universally or always well supported by analysis tools.  Consider using HFS+ to make full use of your toolbox (testing ongoing for differences in APFS/HFS+ disk images)
     - `# hdiutil create -size 70g -volname "Macintosh HD" -fs HFS+ -attach /Volumes/Target/Macbook.dmg`
   - An empty, uncompressed disk image will be created an mounted.  Choosing a volume name that matches the evidence volume will result in the for the disk image mountpoint being appended with a "1"
@@ -43,8 +43,9 @@ NOTE: It is possible to take two different tracks at this point.  One can create
 ### Copy the logical data
 
 - The `ditto` command is present in the Apple recovery environment and will preserve Apple metadata and file ACLs.  It does this by default, so the execution command is quite simple.
-  - ditto <source> <destination>
-    - '# ditto /Volumes/Macintosh\ HD/  /Volumes/Macintosh\ HD\ 1/`
+  - SYNTAX: ditto <source> <destination>
+    - `# ditto /Volumes/Macintosh\ HD/  /Volumes/Macintosh\ HD\ 1/`
+  - In testing, the _file change times are not preserved by the ditto command_.  Instead, they reflect the time the file was written to the disk image.
 
 ### Shutdown the system
 
