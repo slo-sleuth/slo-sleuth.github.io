@@ -30,7 +30,7 @@ Macs with T2 chips (iMacs 2017+, MacBooks 2018+) must be extracted logically.  T
   - exFAT preferred for universal access.
   - Drive will automount read-write
   
-It is possible to take two different tracks at this point  
+NOTE: It is possible to take two different tracks at this point.  One can create an archive of the logical content or a disk image.  The rest of this section will focus on the disk image variant because many analysis tools are capable of reading file system metadata but few, in my experience, do a good job with reading that metadata from archives.
   
 - Create a disk image large enough to hold the evidence volume's logical data
   - hdiutil create -size <integer><m|g|t> -volname <desired name> -fs <HFS+|APFS> -attach <diskimage>
