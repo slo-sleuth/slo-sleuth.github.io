@@ -11,7 +11,7 @@ Macs with T2 chips (iMacs 2017+, MacBooks 2018+) must be extracted logically.  T
 - Boot into recovery 
   - press and hold "CMD + R" on boot
 - Open Terminal 
-  - In the main meny, click Utilities | Terminal
+  - In the main meny, click "Utilities" -> "Terminal"
   - Provide a user password to access the terminal
 - Determine APFS volumes to image 
   - `# diskutil apfs list`
