@@ -53,5 +53,5 @@ _NOTE: It is possible to take two different tracks at this point.  One can creat
   - `# halt`
   - `# shutdown -h now`
 - Alternatively, the computer may be rebooted.
-  - `# shutdown -r now'
+  - `# shutdown -r now`
  
