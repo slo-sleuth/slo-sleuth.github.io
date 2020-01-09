@@ -9,7 +9,7 @@ Validate any information here you plan to utilize: I don't assume any liability 
 ## Apple Data
 
 - [Apple Fusion Drive Acquisition and Mounting](Apple/AppleFusionDrives.md)
-- [APFS Logical Images through Apple Recovery](Apple/APFS%20Imaging.md)
+- [APFS Logical Images through Apple Recovery](Apple/APFSImaging.md)
 
 ## Microsoft Data
 
