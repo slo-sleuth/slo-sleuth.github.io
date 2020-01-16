@@ -18,3 +18,4 @@ Validate any information here you plan to utilize: I don't assume any liability 
 ## Other Data
 
 - [Google Chrome History](OtherData/GoogleChromeHistory.md)
+- [Google LevelDB](OtherData/LevelDB.md)
