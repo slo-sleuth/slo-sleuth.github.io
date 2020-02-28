@@ -1,6 +1,6 @@
 # Google Chrome Profiles
 
-On common task of a digital forensic examiner is to determine who has been using a computing device.  The Google Chrome browser provides a source of such information in the *Web Data* sqlite database.
+One common task of a digital forensic examiner is to determine who has been using a computing device.  The Google Chrome browser provides a source of such information in the *Web Data* sqlite database.
 
 I have developed a query to export the profiles created in the web browser.  I have selected those fields that were last valuable to me, but if you simply uncomment (remove the two hyphens) the line with the asterisk, you can see all the avaialbe fields.
 
