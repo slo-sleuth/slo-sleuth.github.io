@@ -37,12 +37,16 @@ You may have reached this guide after failed installation attempts.  This may ha
 
 As of this writing, the sleuthkit and autopsy should be run with https://bell-sw.com/[Bellsoft Liberica JDK].  Do not install the homebrew `openjdk` package because it installs and incompatible version of the Java Development Kit.
 
+IMPORTANT: Uninstall any JDKs currently installed on the system.  If you installed with brew, simply `brew uninstall <package-name>`.  If you installed with a downloaded installer, follow the developer's instructions for removal.  *Autopsy can report errors with competing JDKs installed.*
+
+Use brew to add the Bellsoft third-party repository and install the full version of Liberica JDK 8.
+
 ----
 % brew tap bell-sw/liberica
 % brew cask install liberica-jdk8-full
 ----
 
-Set the JAVA_HOME environment variable.
+Set the JAVA_HOME environment variable so that Liberica Java can be found.
 
 ----
 % export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
@@ -194,8 +198,6 @@ The testdisk package includes the photorec tool, a dependency of Autopsy.  Photo
 
 === Gstreamer
 
-TIP: You can skip this step as video/audio playback is currently broken in Autopsy on macOS, but you can choose to install it in anticipation of a fix.
-
 The gstreamer package is required for video playback.  It has plugins that provide the functionality needed by gstreamer applications.
 
 ----
@@ -239,24 +241,28 @@ See <<Troubleshooting>> if you are having problems starting autopsy after succes
 You can execute Autopsy in the manner stated at the end of the configuration output.  From the root of the autopsy folder, execute:
 
 ----
-% bin/autopsy
+user@macbook autopsy-4.14.0 % bin/autopsy
 ----
 
-Each time you choose to start Autopsy, you'll need to change to the Autopsy installation directory or type a long path.  However, you can simplify the process in many ways, but I'll demonstrate two here:
+Each time you choose to start Autopsy, you'll need to change to the Autopsy installation directory or type a long path, e.g., `~/Downloads/autopsy-4.14.0/bin/autopsy`.  However, you can simplify the process in many ways, but I'll demonstrate two here:
 
 * Create a link to Autopsy in the home folder.  The open a terminal and launch with `./autopsy`.
 
   % ln -s ./Downloads/autopsy-4.14.0/bin/autopsy autopsy
   % ./autopsy
 
-* Create a application launcher with Automator.
+* Create an application launcher with Automator.
 
-** Under Actions, select *Utilities* then *Run Shell Script* in the next column.  In the box below the Shell selection, enter:
+** Launch Automator from Launchpad.  It starts silently, so expand the window from the Dock icon.
+** Choose *Application* for your type of document.
+*** Under Actions in the left pane, select *Utilities* then *Run Shell Script* in the next column.  
+*** In the box below the Shell selection, enter:
 
   ./Downloads/autopsy-4.14.0/bin/autopsy
 
-** Save your automator file as "Autopsy" and you will now have an *Autopsy.app* in your applications folder.
-*** *Pro Tip:* open the icon.ico in the Autopsy folder and copy it into the Autopsy.app "info" screen to have use the Autopsy icon on your automator application.  Google how to change a macOS icon if you need more information on the steps required.
+** Save your automator application file as "Autopsy" and you will now have an *Autopsy.app* in your applications folder.
+
+Tip: open the icon.ico in the Autopsy folder and copy it into the Autopsy.app "info" screen to have use the Autopsy icon on your automator application.  Google how to change a macOS icon if you need more information on the steps required.
 
 == Known Problems with Autopsy on macOS
 
@@ -299,6 +305,15 @@ If JAVA_HOME is set, sleuthkit was built with java support, and the `Autopsy sta
 ----
 % rm -rf ~/Library/Application\ Support/autopsy
 ----
+
+If Autopsy starts with a Java error reporting an incompatible or later version of Java, e.g., "InvocationTargetException" or references to JDK 13, then you likely have competing versions of Java.  Remove any third party Java installations except the liberica-jdk-8.  If they were installed with brew, you can find and remove them with:
+
+----
+% brew cask list
+% brew uninstall <package-name>
+----
+
+NOTE: If you download and installed Java runtime or development kit from a website, seek directions for uninstalling at from the creator.  It is likely a manual process, but it is essential to your success in runing Autopsy.
 
 == Still Having Trouble?
 
