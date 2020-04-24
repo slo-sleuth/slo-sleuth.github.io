@@ -19,3 +19,7 @@ Validate any information here you plan to utilize: I don't assume any liability 
 
 - [Google Chrome History](OtherData/GoogleChromeHistory.md)
 - [Google LevelDB](OtherData/LevelDB.md)
+
+## Tools
+
+- [Installing Autopsy on macOS](tools/InstallingAutopsyOnMacOS.html)
