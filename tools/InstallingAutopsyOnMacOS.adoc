@@ -300,7 +300,7 @@ sleuthkit-4.8.0.jar
 
 NOTE: If nothing returns, you did not build sleuthkit with java support.  Refer to <<sleuthkit, Building the Sleuthkit>> for help.
 
-If JAVA_HOME is set, sleuthkit was built with java support, and the `Autopsy starts without and you have a window without any normal Autopsy controls (New case window, Menu bar "with Case | View | Tools | Windows | Help"), then you probably started Autopsy once before the build was correct.  To correct, delete the Autopsy application support folder:
+If Autopsy starts without and errors but you don't seee any normal Autopsy controls (New Case dialog and/or a menu bar with "Case | View | Tools | Windows | Help"), then you probably started Autopsy once before the build was correct.  To correct, delete the Autopsy application support folder:
 
 ----
 % rm -rf ~/Library/Application\ Support/autopsy
