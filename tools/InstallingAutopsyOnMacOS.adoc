@@ -64,7 +64,7 @@ Test that you have the correct java JDK-8 installed.  It should be Java version 
 To make the JAVA_HOME variable persistent and thus your life much easier, write the `export` in the section above command into your .`~.bashrc` (macOS 10.14 and below) and/or `~/.zshrc` (macOS 15). 
 
 ----
-% echo 'export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)' | tee -a ~/.bashrc ~./zshrc
+% echo 'export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)' | tee >> ~/.bashrc >> ~./zshrc
 ----
 
 Every new shell instance will now set the required JAVA_HOME variable automatically.  To test, reopen the terminal (or open a new tab) and execute:
