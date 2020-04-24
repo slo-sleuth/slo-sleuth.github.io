@@ -55,8 +55,8 @@ Test that you have the correct java JDK-8 installed.  It should be Java version 
 ----
 % java -version
     openjdk version "1.8.0.###"
-    OpenJDK Runtime Environment (build 1.8.0_###-BellSoft-b10)
-    OpenJDK 64-Bit Server VM (build 25.###-b10, mixed mode)
+    OpenJDK Runtime Environment (build 1.8.0_###-BellSoft-b##)
+    OpenJDK 64-Bit Server VM (build ##.###-b##, mixed mode)
 ----
 
 === JAVA Environment Variable Persistence [[persistence]]
@@ -64,7 +64,7 @@ Test that you have the correct java JDK-8 installed.  It should be Java version 
 To make the JAVA_HOME variable persistent and thus your life much easier, write the `export` in the section above command into your .`~.bashrc` (macOS 10.14 and below) and/or `~/.zshrc` (macOS 15). 
 
 ----
-% echo "export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)" | tee -a ~/.bashrc ~./zshrc
+% echo 'export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)' | tee -a ~/.bashrc ~./zshrc
 ----
 
 Every new shell instance will now set the required JAVA_HOME variable automatically.  To test, reopen the terminal (or open a new tab) and execute:
@@ -82,14 +82,14 @@ IMPORTANT: The Homebrew package manager has a sleuthkit v4.8.0 package, but it w
 
 === Install Sleuthkit Dependencies [[sleuthkitdeps]]
 
-The Sleuthkit requires several packages to build it with full support.  The `ant` package should be installed without it's dependency, openjdk, and thus is installed separately from the others.  Remeber, Liberica JDK takes it's place.
+The Sleuthkit requires several packages to build it with full support.  The `openjdk` package, which is installed as a dependency of `ant` must be uninstalled because it is the wrong version of java.  The Liberica JDK you previously installed takes it's place.
 
 ----
-% brew install libaff libewf libpq
-% brew install ant --ignore-dependencies
+% brew install ant afflib libewf libpq
+% brew uninstall openjdk --ignore-dependencies
 ----
 
-Now create a link from the liberica-jdk8 installation to where applications expect to find openjdk.  This is necessary to build sleuthkit with java 1.8.0 support.
+Now create a link from the liberica-jdk8 installation to where `ant` expects to find openjdk.  This is necessary to build sleuthkit with java 1.8.0 support.
 
 ----
 % ln -s $JAVA_HOME /usr/local/opt/openjdk
