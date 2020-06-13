@@ -14,7 +14,7 @@ Under the right condititions, these two modes can be exploited to recover iDevic
 
 The [libimobiledevice](http://www.libimobiledevice.org/) library and tools are useful for interrogating an iDevice for it's core information such as device model, Unique Device ID (UDID), device name, iOS version, Wifi MAC address, and more.  However, it requires USB access to the device which is blocked by USB Restricted Mode.
 
-Device information can be obtained from an iDevice by placing it into Diagnostics Mode.  Besides revealing reveals the device serial number, MEID and IMEI when selecting the :information_source: "Information" button in the Diagnostics Mode home screen, USB Restricted mode is disabled allowing the libimobiledevice tool `ideviceinfo` to function.
+Device information can be obtained from an iDevice by placing it into Diagnostics Mode.  Besides revealing the device serial number, MEID and IMEI when selecting the :information_source: "Information" button in the Diagnostics Mode home screen, USB Restricted mode is disabled allowing the libimobiledevice tool `ideviceinfo` to function.
 
 __WARNING:__ _This process requires the device to be rebooted.  If your device is in After First Unlock (AFU) mode, you will loose access to decrypted data.  If you have the means (i.e., commercial tools) to access AFU data, use them before using this process._
 
@@ -163,7 +163,7 @@ Once a phone is connected in DFU mode, checkra1n will immediately proceed to exp
  - [*]: Booting...
  ```
  
-IMPORTANT: _If the phone is locked and the passcode is unknown, press and hold the volume up and volume down buttons while the exploit as soon as the exploit indicates it is booting.  This will cause the phone to boot into Diagnostics mode.  If you miss diagnostics mode, re-run the checkra1n._
+IMPORTANT: _If the phone is locked and the passcode is unknown, press and hold the volume up and volume down buttons as soon as the exploit indicates it is booting.  This will cause the phone to boot into Diagnostics mode.  If you miss diagnostics mode, re-run the checkra1n._
 
 NOTE: _If you have the passcode, you can let the phone boot normally._
 
