@@ -22,4 +22,4 @@ Validate any information here you plan to utilize: I don't assume any liability 
 
 ## Tools
 
-- [Installing Autopsy on macOS](tools/InstallingAutopsyOnMacOS.html)
+- [Installing Autopsy on macOS](tools/InstallingAutopsyOnMacOS.md)
