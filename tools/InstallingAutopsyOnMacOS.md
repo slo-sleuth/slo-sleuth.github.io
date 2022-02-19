@@ -53,7 +53,7 @@ Use brew to add the Bellsoft third-party repository and install the full version
 
 ```sh
 % brew tap bell-sw/liberica
-% brew cask install liberica-jdk8-full
+% brew install --cask  liberica-jdk8-full
 ```
 
 Set the `JAVA_HOME` environment variable so that Liberica Java can be found.
